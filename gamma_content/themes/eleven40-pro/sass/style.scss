@@ -1,0 +1,91 @@
+/*!
+    Theme Name: eleven40 Pro Theme
+    Theme URI: http://my.studiopress.com/themes/eleven40/
+    Description: A mobile responsive and HTML5 theme built for the Genesis Framework.
+    Author: StudioPress
+    Author URI: http://www.studiopress.com/
+
+    Version: 2.0
+
+    Tags: black, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+
+    Template: genesis
+    Template Version: 2.0
+
+    License: GPL-2.0+
+    License URI: http://www.opensource.org/licenses/gpl-license.php 
+*/
+
+ 
+/* Table of Contents
+
+    - HTML5 Reset
+        - Baseline Normalize
+        - Box Sizing
+        - Float Clearing
+    - Defaults
+        - Typographical Elements
+        - Headings
+        - Objects
+        - Forms
+        - Tables
+    - Structure and Layout
+        - Site Containers
+        - Page Title
+        - Column Widths and Positions
+        - Genesis Grid Loop
+        - Column Classes
+    - Common Classes
+        - WordPress
+        - Genesis
+        - Headings
+    - Widgets
+        - Featured Page and Featured Post
+    - Plugins
+        - Genesis eNews Extended
+        - Genesis Latest Tweets
+        - Jetpack
+        - Gravity Forms
+    - Site Header
+        - Title Area
+        - Widget Area
+    - Site Navigation
+        - Header Navigation
+        - Primary Navigation
+        - Secondary Navigation
+    - Content Area
+        - Entries
+        - Pagination
+        - Comments
+    - Sidebars
+    - Footer Widgets
+    - Site Footer
+    - Color Styles
+        - eleven40 Pro Blue
+        - eleven40 Pro Green
+        - eleven40 Pro Red
+    - Media Queries
+        - max-width: 1139px
+        - max-width: 1023px
+        - max-width: 767px
+
+*/
+
+@import "compass/css3";
+@import "reset";
+@import "vars.scss";
+@import "defaults";
+@import "structure-layout";
+@import "common-classes";
+@import "widgets";
+@import "plugins";
+@import "site-header";
+@import "site-navigation";
+@import "content-area";
+@import "custom-post-types";
+@import "content-boxes-buttons";
+@import "sidebars";
+@import "footer-widgets";
+@import "site-footer";
+@import "color-styles";
+@import "media-queries";

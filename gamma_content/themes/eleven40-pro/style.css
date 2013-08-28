@@ -1,0 +1,2661 @@
+/*
+    Theme Name: eleven40 Pro Theme
+    Theme URI: http://my.studiopress.com/themes/eleven40/
+    Description: A mobile responsive and HTML5 theme built for the Genesis Framework.
+    Author: StudioPress
+    Author URI: http://www.studiopress.com/
+
+    Version: 2.0
+
+    Tags: black, white, one-column, two-columns, three-columns, fixed-width, custom-menu, full-width-template, sticky-post, theme-options, threaded-comments, translation-ready
+
+    Template: genesis
+    Template Version: 2.0
+
+    License: GPL-2.0+
+    License URI: http://www.opensource.org/licenses/gpl-license.php 
+*/
+/* Table of Contents
+
+    - HTML5 Reset
+        - Baseline Normalize
+        - Box Sizing
+        - Float Clearing
+    - Defaults
+        - Typographical Elements
+        - Headings
+        - Objects
+        - Forms
+        - Tables
+    - Structure and Layout
+        - Site Containers
+        - Page Title
+        - Column Widths and Positions
+        - Genesis Grid Loop
+        - Column Classes
+    - Common Classes
+        - WordPress
+        - Genesis
+        - Headings
+    - Widgets
+        - Featured Page and Featured Post
+    - Plugins
+        - Genesis eNews Extended
+        - Genesis Latest Tweets
+        - Jetpack
+        - Gravity Forms
+    - Site Header
+        - Title Area
+        - Widget Area
+    - Site Navigation
+        - Header Navigation
+        - Primary Navigation
+        - Secondary Navigation
+    - Content Area
+        - Entries
+        - Pagination
+        - Comments
+    - Sidebars
+    - Footer Widgets
+    - Site Footer
+    - Color Styles
+        - eleven40 Pro Blue
+        - eleven40 Pro Green
+        - eleven40 Pro Red
+    - Media Queries
+        - max-width: 1139px
+        - max-width: 1023px
+        - max-width: 767px
+
+*/
+/*
+HTML5 Reset
+---------------------------------------------------------------------------------------------------- */
+/* Baseline Normalize
+	normalize.css v2.1.2 | MIT License | git.io/normalize
+--------------------------------------------- */
+/* line 9, sass/_reset.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+  display: block;
+}
+
+/* line 9, sass/_reset.scss */
+audio, canvas, video {
+  display: inline-block;
+}
+
+/* line 9, sass/_reset.scss */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/* line 9, sass/_reset.scss */
+[hidden] {
+  display: none;
+}
+
+/* line 9, sass/_reset.scss */
+html {
+  font-family: sans-serif;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 9, sass/_reset.scss */
+body {
+  margin: 0;
+}
+
+/* line 9, sass/_reset.scss */
+a:focus {
+  outline: thin dotted;
+}
+
+/* line 9, sass/_reset.scss */
+a:active, a:hover {
+  outline: 0;
+}
+
+/* line 9, sass/_reset.scss */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/* line 9, sass/_reset.scss */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/* line 9, sass/_reset.scss */
+b, strong {
+  font-weight: bold;
+}
+
+/* line 9, sass/_reset.scss */
+dfn {
+  font-style: italic;
+}
+
+/* line 9, sass/_reset.scss */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/* line 9, sass/_reset.scss */
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/* line 9, sass/_reset.scss */
+code, kbd, pre, samp {
+  font-family: monospace,serif;
+  font-size: 1em;
+}
+
+/* line 9, sass/_reset.scss */
+pre {
+  white-space: pre-wrap;
+}
+
+/* line 9, sass/_reset.scss */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+
+/* line 9, sass/_reset.scss */
+small {
+  font-size: 80%;
+}
+
+/* line 9, sass/_reset.scss */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+/* line 9, sass/_reset.scss */
+sup {
+  top: -0.5em;
+}
+
+/* line 9, sass/_reset.scss */
+sub {
+  bottom: -0.25em;
+}
+
+/* line 9, sass/_reset.scss */
+img {
+  border: 0;
+}
+
+/* line 9, sass/_reset.scss */
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* line 9, sass/_reset.scss */
+figure {
+  margin: 0;
+}
+
+/* line 9, sass/_reset.scss */
+fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/* line 9, sass/_reset.scss */
+legend {
+  border: 0;
+  padding: 0;
+}
+
+/* line 9, sass/_reset.scss */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 9, sass/_reset.scss */
+button, input {
+  line-height: normal;
+}
+
+/* line 9, sass/_reset.scss */
+button, select {
+  text-transform: none;
+}
+
+/* line 9, sass/_reset.scss */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  cursor: pointer;
+}
+
+/* line 9, sass/_reset.scss */
+button[disabled], html input[disabled] {
+  cursor: default;
+}
+
+/* line 9, sass/_reset.scss */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+/* line 9, sass/_reset.scss */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  box-sizing: content-box;
+}
+
+/* line 9, sass/_reset.scss */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/* line 9, sass/_reset.scss */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/* line 9, sass/_reset.scss */
+textarea {
+  overflow: auto;
+  vertical-align: top;
+}
+
+/* line 9, sass/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Box Sizing
+--------------------------------------------- */
+/* line 15, sass/_reset.scss */
+*,
+input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* Float Clearing
+--------------------------------------------- */
+/* line 37, sass/_reset.scss */
+.archive-pagination:before,
+.author-box:before,
+.clearfix:before,
+.entry:before,
+.entry-comments:before,
+.entry-pagination:before,
+.footer-widgets:before,
+.nav-primary:before,
+.nav-secondary:before,
+.site-container:before,
+.site-footer:before,
+.site-header:before,
+.site-inner:before,
+.wrap:before {
+  content: " ";
+  display: table;
+}
+
+/* line 55, sass/_reset.scss */
+.archive-pagination:after,
+.author-box:after,
+.clearfix:after,
+.entry:after,
+.entry-comments:after,
+.entry-pagination:after,
+.footer-widgets:after,
+.nav-primary:after,
+.nav-secondary:after,
+.site-container:after,
+.site-footer:after,
+.site-header:after,
+.site-inner:after,
+.wrap:after {
+  clear: both;
+  content: " ";
+  display: table;
+}
+
+/* Example of the types of things you might what you might put into _vars.scss */
+/*
+Defaults
+---------------------------------------------------------------------------------------------------- */
+/* Typographical Elements
+--------------------------------------------- */
+/* line 8, sass/_defaults.scss */
+html {
+  font-size: 62.5%;
+  /* 10px browser default */
+}
+
+/* line 12, sass/_defaults.scss */
+body {
+  color: #333;
+  font-family: "Lora", serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  line-height: 1.625;
+}
+
+/* line 20, sass/_defaults.scss */
+body.eleven40-landing {
+  background: url(images/texture.png);
+}
+
+/* line 28, sass/_defaults.scss */
+a,
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+
+/* line 36, sass/_defaults.scss */
+::-moz-selection {
+  background-color: #222;
+  color: #fff;
+}
+
+/* line 41, sass/_defaults.scss */
+::selection {
+  background-color: #222;
+  color: #fff;
+}
+
+/* line 46, sass/_defaults.scss */
+a {
+  color: #ed702b;
+  text-decoration: none;
+}
+
+/* line 51, sass/_defaults.scss */
+a:hover {
+  text-decoration: underline;
+}
+
+/* line 55, sass/_defaults.scss */
+p {
+  margin: 0 0 24px;
+  margin: 0 0 2.4rem;
+  padding: 0;
+}
+
+/* line 61, sass/_defaults.scss */
+strong {
+  font-weight: 700;
+}
+
+/* line 66, sass/_defaults.scss */
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 72, sass/_defaults.scss */
+blockquote,
+blockquote::before {
+  color: #999;
+}
+
+/* line 76, sass/_defaults.scss */
+blockquote {
+  margin: 40px 40px 24px;
+  margin: 4rem 4rem 2.4rem;
+}
+
+/* line 81, sass/_defaults.scss */
+blockquote::before {
+  content: "\201C";
+  display: block;
+  font-size: 30px;
+  font-size: 3rem;
+  height: 0;
+  left: -20px;
+  position: relative;
+  top: -10px;
+}
+
+/* line 92, sass/_defaults.scss */
+.entry-content code {
+  background-color: #333;
+  color: #ddd;
+}
+
+/* line 97, sass/_defaults.scss */
+cite {
+  font-style: normal;
+}
+
+/* Headings
+--------------------------------------------- */
+/* line 109, sass/_defaults.scss */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #333;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  margin: 0;
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+  padding: 0;
+}
+
+/* line 120, sass/_defaults.scss */
+h1 {
+  font-size: 36px;
+  font-size: 3.6rem;
+}
+
+/* line 125, sass/_defaults.scss */
+h2 {
+  font-size: 30px;
+  font-size: 3rem;
+}
+
+/* line 130, sass/_defaults.scss */
+h3 {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/* line 135, sass/_defaults.scss */
+h4 {
+  font-size: 20px;
+  font-size: 2rem;
+}
+
+/* line 140, sass/_defaults.scss */
+h5 {
+  font-size: 18px;
+  font-size: 1.8rem;
+}
+
+/* line 145, sass/_defaults.scss */
+h6 {
+  font-size: 16px;
+  font-size: 1.6rem;
+}
+
+/* Objects
+--------------------------------------------- */
+/* line 158, sass/_defaults.scss */
+embed,
+iframe,
+img,
+object,
+video,
+.wp-caption {
+  max-width: 100%;
+}
+
+/* line 162, sass/_defaults.scss */
+img {
+  height: auto;
+}
+
+/* line 167, sass/_defaults.scss */
+.featured-content img,
+.gallery img {
+  width: auto;
+  /* IE8 */
+}
+
+/* Forms
+--------------------------------------------- */
+/* line 176, sass/_defaults.scss */
+input,
+select,
+textarea {
+  background-color: #f5f5f5;
+  border: 1px solid #dddddd;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px #eeeeee inset;
+  color: #999;
+  font-family: "Lora", serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 16px;
+  padding: 1.6rem;
+  width: 100%;
+}
+
+/* line 193, sass/_defaults.scss */
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  background-color: #222;
+  border: none;
+  box-shadow: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  padding: 16px 24px;
+  padding: 1.6rem 2.4rem;
+  text-transform: uppercase;
+  width: auto;
+}
+
+/* line 212, sass/_defaults.scss */
+button:hover,
+input:hover[type="button"],
+input:hover[type="reset"],
+input:hover[type="submit"] {
+  background-color: #ed702b;
+}
+
+/* line 217, sass/_defaults.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button {
+  display: none;
+}
+
+/* Tables
+--------------------------------------------- */
+/* line 224, sass/_defaults.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  line-height: 2;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+/* line 233, sass/_defaults.scss */
+tbody {
+  border-bottom: 1px solid #dddddd;
+}
+
+/* line 238, sass/_defaults.scss */
+th,
+td {
+  text-align: left;
+}
+
+/* line 242, sass/_defaults.scss */
+th {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+/* line 247, sass/_defaults.scss */
+td {
+  border-top: 1px solid #dddddd;
+  padding: 6px 0;
+  padding: 0.6rem 0;
+}
+
+/*
+Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+/* Site Containers
+--------------------------------------------- */
+/* line 8, sass/_structure-layout.scss */
+.wrap {
+  margin: 0 auto;
+  max-width: 1140px;
+}
+
+/* line 13, sass/_structure-layout.scss */
+.eleven40-landing .wrap {
+  max-width: 800px;
+}
+
+/* line 17, sass/_structure-layout.scss */
+.site-inner {
+  clear: both;
+  margin: 65px 0 40px;
+  margin: 6.5rem 0 4rem;
+}
+
+/* line 23, sass/_structure-layout.scss */
+.site-inner .wrap {
+  border-bottom: double #dddddd;
+}
+
+/* line 27, sass/_structure-layout.scss */
+.eleven40-landing .site-inner {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 32, sass/_structure-layout.scss */
+.eleven40-landing .site-inner .wrap {
+  border: none;
+}
+
+/* Column Widths and Positions
+--------------------------------------------- */
+/* Wrapping div for .content and .sidebar-primary */
+/* line 43, sass/_structure-layout.scss */
+.content-sidebar-sidebar .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap,
+.sidebar-sidebar-content .content-sidebar-wrap {
+  width: 950px;
+}
+
+/* line 47, sass/_structure-layout.scss */
+.content-sidebar-sidebar .content-sidebar-wrap {
+  float: left;
+}
+
+/* line 52, sass/_structure-layout.scss */
+.sidebar-sidebar-content .content-sidebar-wrap,
+.sidebar-content-sidebar .content-sidebar-wrap {
+  float: right;
+}
+
+/* Content */
+/* line 58, sass/_structure-layout.scss */
+.content {
+  border-left: 1px solid #dddddd;
+  border-right: 1px solid #dddddd;
+  float: right;
+  padding: 32px 40px 24px;
+  padding: 3.2rem 4rem 2.4rem;
+  width: 850px;
+}
+
+/* line 69, sass/_structure-layout.scss */
+.sidebar-content-sidebar .content,
+.sidebar-sidebar-content .content,
+.content-sidebar-sidebar .content {
+  width: 660px;
+}
+
+/* line 73, sass/_structure-layout.scss */
+.content-sidebar .content {
+  border-left: none;
+  float: left;
+  padding-left: 0;
+}
+
+/* line 79, sass/_structure-layout.scss */
+.content-sidebar-sidebar .content {
+  border-left: none;
+  float: left;
+  padding-left: 0;
+}
+
+/* line 85, sass/_structure-layout.scss */
+.sidebar-content-sidebar .content {
+  float: left;
+}
+
+/* line 89, sass/_structure-layout.scss */
+.sidebar-content .content {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* line 94, sass/_structure-layout.scss */
+.sidebar-sidebar-content .content {
+  border-right: none;
+  padding-right: 0;
+}
+
+/* line 99, sass/_structure-layout.scss */
+.full-width-content .content {
+  border: none;
+  padding: 40px 0 0;
+  padding: 4rem 0 0;
+  width: 100%;
+}
+
+/* Primary Sidebar */
+/* line 108, sass/_structure-layout.scss */
+.sidebar-primary {
+  float: right;
+  width: 250px;
+}
+
+/* line 114, sass/_structure-layout.scss */
+.sidebar-content .sidebar-primary,
+.sidebar-sidebar-content .sidebar-primary {
+  float: left;
+}
+
+/* Secondary Sidebar */
+/* line 120, sass/_structure-layout.scss */
+.sidebar-secondary {
+  float: left;
+  width: 150px;
+}
+
+/* line 125, sass/_structure-layout.scss */
+.content-sidebar-sidebar .sidebar-secondary {
+  float: right;
+}
+
+/* Genesis Grid Loop
+--------------------------------------------- */
+/* line 133, sass/_structure-layout.scss */
+.genesis-grid-even,
+.genesis-grid-odd {
+  margin-bottom: 20px;
+  margin-bottom: 2rem;
+  width: 48%;
+}
+
+/* line 139, sass/_structure-layout.scss */
+.genesis-grid-even {
+  float: right;
+}
+
+/* line 143, sass/_structure-layout.scss */
+.genesis-grid-odd {
+  clear: both;
+  float: left;
+}
+
+/* line 149, sass/_structure-layout.scss */
+.genesis-grid .entry-title,
+.genesis-grid .entry-title a {
+  font-size: 24px;
+  font-size: 2.4rem;
+  line-height: 1.2;
+}
+
+/* Column Classes
+	Link: http://twitter.github.io/bootstrap/assets/css/bootstrap-responsive.css
+--------------------------------------------- */
+/* line 169, sass/_structure-layout.scss */
+.five-sixths,
+.four-sixths,
+.one-fourth,
+.one-half,
+.one-sixth,
+.one-third,
+.three-fourths,
+.three-sixths,
+.two-fourths,
+.two-sixths,
+.two-thirds {
+  float: left;
+  margin-left: 2.564102564102564%;
+}
+
+/* line 176, sass/_structure-layout.scss */
+.one-half,
+.three-sixths,
+.two-fourths {
+  width: 48.717948717948715%;
+}
+
+/* line 181, sass/_structure-layout.scss */
+.one-third,
+.two-sixths {
+  width: 31.623931623931625%;
+}
+
+/* line 186, sass/_structure-layout.scss */
+.four-sixths,
+.two-thirds {
+  width: 65.81196581196582%;
+}
+
+/* line 190, sass/_structure-layout.scss */
+.one-fourth {
+  width: 23.076923076923077%;
+}
+
+/* line 194, sass/_structure-layout.scss */
+.three-fourths {
+  width: 74.35897435897436%;
+}
+
+/* line 198, sass/_structure-layout.scss */
+.one-sixth {
+  width: 14.52991452991453%;
+}
+
+/* line 202, sass/_structure-layout.scss */
+.five-sixths {
+  width: 82.90598290598291%;
+}
+
+/* line 206, sass/_structure-layout.scss */
+.first {
+  clear: both;
+  margin-left: 0;
+}
+
+/*
+Common Classes
+---------------------------------------------------------------------------------------------------- */
+/* WordPress
+--------------------------------------------- */
+/* line 8, sass/_common-classes.scss */
+.avatar {
+  float: left;
+}
+
+/* line 12, sass/_common-classes.scss */
+.alignleft .avatar {
+  margin-right: 24px;
+  margin-right: 2.4rem;
+}
+
+/* line 17, sass/_common-classes.scss */
+.alignright .avatar {
+  margin-left: 24px;
+  margin-left: 2.4rem;
+}
+
+/* line 25, sass/_common-classes.scss */
+.search-form {
+  width: 50%;
+}
+
+/* line 29, sass/_common-classes.scss */
+.search-form input[type="submit"] {
+  border: 0;
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+/* line 40, sass/_common-classes.scss */
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px;
+  margin: 0 auto 2.4rem;
+}
+
+/* line 46, sass/_common-classes.scss */
+img.alignnone {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+}
+
+/* line 51, sass/_common-classes.scss */
+.alignleft {
+  float: left;
+  text-align: left;
+}
+
+/* line 56, sass/_common-classes.scss */
+.alignright {
+  float: right;
+  text-align: right;
+}
+
+/* line 63, sass/_common-classes.scss */
+img.alignleft,
+.featured-content .alignleft img,
+.wp-caption.alignleft {
+  margin: 0 24px 24px 0;
+  margin: 0 2.4rem 2.4rem 0;
+}
+
+/* line 70, sass/_common-classes.scss */
+img.alignright,
+.featured-content .alignright img,
+.wp-caption.alignright {
+  margin: 0 0 24px 24px;
+  margin: 0 0 2.4rem 2.4rem;
+}
+
+/* line 75, sass/_common-classes.scss */
+.wp-caption-text {
+  font-size: 14px;
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin: 0;
+  text-align: center;
+}
+
+/* line 86, sass/_common-classes.scss */
+.widget_calendar table {
+  width: 100%;
+}
+
+/* line 90, sass/_common-classes.scss */
+.widget_calendar td {
+  text-align: center;
+}
+
+/* Genesis
+--------------------------------------------- */
+/* line 97, sass/_common-classes.scss */
+.breadcrumb {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
+  padding: 12px 16px;
+  padding: 1.2rem 1.6rem;
+}
+
+/*
+.archive-description,
+.author-box {
+	background: url(images/texture.png);
+	color: #fff;
+	margin-bottom: 40px;
+	margin-bottom: 4rem;
+	padding: 40px;
+	padding: 4rem;
+}
+
+*/
+/* line 121, sass/_common-classes.scss */
+.archive-description,
+.author-box {
+  background-color: #F5F5F5;
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+  padding: 40px;
+  padding: 4rem;
+}
+
+/* line 129, sass/_common-classes.scss */
+.sidebar-content-sidebar .archive-description,
+.sidebar-content-sidebar .author-box {
+  margin: 0 -40px 40px;
+  margin: 0 -4rem 4rem;
+}
+
+/* line 135, sass/_common-classes.scss */
+.archive-description h1,
+.author-box h1 {
+  font-family: "Lora", serif;
+  font-size: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* line 146, sass/_common-classes.scss */
+.archive-description p,
+.author-box p {
+  font-size: 15px;
+  font-size: 1.5rem;
+  margin-bottom: 0;
+}
+
+/* line 152, sass/_common-classes.scss */
+.author-box .avatar {
+  margin-right: 24px;
+  margin-right: 2.4rem;
+}
+
+/* Headings
+--------------------------------------------- */
+/* line 160, sass/_common-classes.scss */
+.entry-title {
+  font-size: 36px;
+  font-size: 3.6rem;
+  line-height: 1;
+}
+
+/* line 167, sass/_common-classes.scss */
+.entry-title a,
+.sidebar .widgettitle a {
+  color: #333;
+}
+
+/* line 171, sass/_common-classes.scss */
+.entry-title a:hover {
+  color: #ed702b;
+  text-decoration: none;
+}
+
+/* line 176, sass/_common-classes.scss */
+.widgettitle {
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+  text-transform: uppercase;
+}
+
+/* line 186, sass/_common-classes.scss */
+.site-header .widget-area .widgettitle {
+  color: #fff;
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* line 192, sass/_common-classes.scss */
+.sidebar .widgettitle a {
+  border: none;
+}
+
+/* line 196, sass/_common-classes.scss */
+.archive-title {
+  font-size: 20px;
+  font-size: 2rem;
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+/*
+Widgets
+---------------------------------------------------------------------------------------------------- */
+/* Featured Page and Featured Post
+--------------------------------------------- */
+/* line 8, sass/_widgets.scss */
+.featured-content .entry {
+  margin-bottom: 12px;
+  margin-bottom: 1.2rem;
+  padding: 0;
+}
+
+/* line 14, sass/_widgets.scss */
+.featured-content .entry-title {
+  font-size: 24px;
+  font-size: 2.4rem;
+}
+
+/*
+Plugins
+---------------------------------------------------------------------------------------------------- */
+/* Genesis eNews Extended
+--------------------------------------------- */
+/* line 8, sass/_plugins.scss */
+.enews-widget input {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+/* line 13, sass/_plugins.scss */
+.enews-widget input[type="submit"] {
+  margin: 0;
+  width: 100%;
+}
+
+/* Genesis Latest Tweets
+--------------------------------------------- */
+/* line 21, sass/_plugins.scss */
+.latest-tweets ul li {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+/* Jetpack
+--------------------------------------------- */
+/* line 29, sass/_plugins.scss */
+img#wpstats {
+  display: none;
+}
+
+/* Gravity Forms
+--------------------------------------------- */
+/* line 38, sass/_plugins.scss */
+div.gform_wrapper input[type="text"],
+div.gform_wrapper textarea,
+div.gform_wrapper .ginput_complex label {
+  font-size: 16px;
+  font-size: 1.6rem;
+  padding: 16px;
+  padding: 1.6rem;
+}
+
+/* line 45, sass/_plugins.scss */
+div.gform_wrapper .ginput_complex label {
+  padding: 0;
+}
+
+/* line 50, sass/_plugins.scss */
+div.gform_wrapper li,
+div.gform_wrapper form li {
+  margin: 16px 0 0;
+  margin: 1.6rem 0 0;
+}
+
+/* line 55, sass/_plugins.scss */
+div.gform_wrapper .gform_footer input[type="submit"] {
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/*
+Site Header
+---------------------------------------------------------------------------------------------------- */
+/* line 5, sass/_site-header.scss */
+.site-header {
+  background: url(images/texture.png);
+  min-height: 65px;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+}
+
+/* line 13, sass/_site-header.scss */
+.header-image .site-header {
+  padding: 0;
+}
+
+/* Title Area
+--------------------------------------------- */
+/* line 20, sass/_site-header.scss */
+.title-area {
+  float: left;
+  width: 360px;
+}
+
+/* line 25, sass/_site-header.scss */
+.site-title {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+  font-size: 2.4rem;
+  letter-spacing: 2px;
+  letter-spacing: 0.2rem;
+  line-height: 1;
+  margin: 0;
+  padding: 20px 0;
+  padding: 2rem 0;
+  text-transform: uppercase;
+}
+
+/* line 38, sass/_site-header.scss */
+.header-image .site-title {
+  padding: 0;
+}
+
+/* line 43, sass/_site-header.scss */
+.site-title a,
+.site-title a:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* line 48, sass/_site-header.scss */
+.site-description {
+  border-bottom: double #dddddd;
+  border-top: double #dddddd;
+  font-family: "Lora", serif;
+  font-size: 30px;
+  overflow: hidden;
+  margin: 40px 0 0;
+  margin: 4rem 0 0;
+  padding: 24px 0;
+  padding: 2.4rem;
+  text-align: center;
+}
+
+/* Full width header, no widgets */
+/* line 64, sass/_site-header.scss */
+.header-full-width .title-area,
+.header-full-width .site-title {
+  width: 100%;
+}
+
+/* line 68, sass/_site-header.scss */
+.header-image .site-title a {
+  display: block;
+  text-indent: -9999px;
+}
+
+/* Logo, hide text */
+/* line 75, sass/_site-header.scss */
+.header-image .title-area {
+  padding: 0;
+}
+
+/* line 79, sass/_site-header.scss */
+.header-image .site-title a {
+  float: left;
+  min-height: 65px;
+  width: 100%;
+}
+
+/* Widget Area
+--------------------------------------------- */
+/* line 89, sass/_site-header.scss */
+.site-header .widget-area {
+  color: #fff;
+  float: right;
+  text-align: right;
+  width: 760px;
+}
+
+/* line 96, sass/_site-header.scss */
+.site-header .search-form {
+  float: right;
+  margin-top: 6px;
+  margin-top: 0.6rem;
+}
+
+/* line 102, sass/_site-header.scss */
+.site-header .widget_text {
+  margin-top: 12px;
+  margin-top: 1.2rem;
+}
+
+/*
+Site Navigation
+---------------------------------------------------------------------------------------------------- */
+/* line 112, sass/_site-header.scss */
+.genesis-nav-menu {
+  clear: both;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+/* line 130, sass/_site-header.scss */
+.genesis-nav-menu .menu-item {
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 135, sass/_site-header.scss */
+.genesis-nav-menu a {
+  border: none;
+  color: #fff;
+  display: block;
+  padding: 22px 18px;
+  padding: 2.2rem 1.8rem;
+  position: relative;
+}
+
+/* line 145, sass/_site-header.scss */
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a {
+  color: #ed702b;
+  text-decoration: none;
+}
+
+/* line 150, sass/_site-header.scss */
+.genesis-nav-menu > .menu-item > a {
+  text-transform: uppercase;
+}
+
+/* line 154, sass/_site-header.scss */
+.genesis-nav-menu .sub-menu {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 190px;
+  z-index: 99;
+}
+
+/* line 167, sass/_site-header.scss */
+.genesis-nav-menu .sub-menu a {
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  letter-spacing: 0;
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
+  position: relative;
+  width: 190px;
+}
+
+/* line 178, sass/_site-header.scss */
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -54px 0 0 189px;
+}
+
+/* line 182, sass/_site-header.scss */
+.genesis-nav-menu .menu-item:hover {
+  position: static;
+}
+
+/* line 186, sass/_site-header.scss */
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
+/* line 191, sass/_site-header.scss */
+.genesis-nav-menu > .first > a {
+  padding-left: 0;
+}
+
+/* line 195, sass/_site-header.scss */
+.genesis-nav-menu > .last > a {
+  padding-right: 0;
+}
+
+/* line 199, sass/_site-header.scss */
+.genesis-nav-menu > .right {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  padding: 22px 18px;
+  padding: 2.2rem 1.8rem;
+  text-transform: uppercase;
+}
+
+/* line 208, sass/_site-header.scss */
+.genesis-nav-menu > .right > a {
+  display: inline;
+  padding: 0;
+}
+
+/* line 213, sass/_site-header.scss */
+.genesis-nav-menu > .rss > a {
+  margin-left: 48px;
+  margin-left: 4.8rem;
+}
+
+/* line 218, sass/_site-header.scss */
+.genesis-nav-menu > .search {
+  padding: 8px 12px 0 0;
+  padding: 0.8rem 1.2rem 0 0;
+}
+
+/* line 223, sass/_site-header.scss */
+.genesis-nav-menu .search-form {
+  width: 100%;
+}
+
+/* Site Header Navigation
+--------------------------------------------- */
+/* line 230, sass/_site-header.scss */
+.site-header .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 236, sass/_site-header.scss */
+.site-header .current-menu-item > a,
+.site-header .genesis-nav-menu a:hover,
+.site-header .sub-menu a:hover {
+  color: #ed702b;
+}
+
+/* Primary Navigation
+--------------------------------------------- */
+/* line 244, sass/_site-header.scss */
+.nav-primary,
+.nav-primary .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 248, sass/_site-header.scss */
+.nav-primary {
+  border-top: 1px solid white;
+}
+
+/* line 252, sass/_site-header.scss */
+.nav-primary .wrap {
+  border: none;
+}
+
+/* line 259, sass/_site-header.scss */
+.nav-primary a:hover,
+.nav-primary .current-menu-item > a,
+.nav-primary .sub-menu a:hover,
+.nav-primary .sub-menu .current-menu-item > a:hover {
+  color: #ed702b;
+}
+
+/* line 263, sass/_site-header.scss */
+.nav-primary .sub-menu .current-menu-item > a {
+  color: #fff;
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+/* line 271, sass/_site-header.scss */
+.nav-secondary,
+.nav-secondary .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 275, sass/_site-header.scss */
+.nav-secondary {
+  border-top: 1px solid white;
+}
+
+/* line 279, sass/_site-header.scss */
+.nav-secondary .wrap {
+  border: none;
+}
+
+/* line 286, sass/_site-header.scss */
+.nav-secondary a:hover,
+.nav-secondary .current-menu-item > a,
+.nav-secondary .sub-menu a:hover,
+.nav-secondary .sub-menu .current-menu-item > a:hover {
+  color: #ed702b;
+}
+
+/* line 290, sass/_site-header.scss */
+.nav-secondary .sub-menu .current-menu-item > a {
+  color: #fff;
+}
+
+/* Sticky Nav Menu 
+.genesis-nav-menu {
+  position:fixed;
+  //background: #000;
+  top:0;
+  right:0;
+  left:0;
+  z-index:99;
+
+}
+*/
+/*
+Site Navigation
+---------------------------------------------------------------------------------------------------- */
+/* line 5, sass/_site-navigation.scss */
+.genesis-nav-menu {
+  clear: both;
+  color: #fff;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  letter-spacing: 0.1rem;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  	/* Sticky Nav Menu 
+  .genesis-nav-menu {
+    position:fixed;
+    //background: #000;
+    top:0;
+    right:0;
+    left:0;
+    z-index:99;
+  
+  }
+  */
+}
+
+/* line 32, sass/_site-navigation.scss */
+.genesis-nav-menu .menu-item {
+  display: inline-block;
+  text-align: left;
+}
+
+/* line 37, sass/_site-navigation.scss */
+.genesis-nav-menu a {
+  border: none;
+  color: #fff;
+  display: block;
+  padding: 22px 18px;
+  padding: 2.2rem 1.8rem;
+  position: relative;
+}
+
+/* line 47, sass/_site-navigation.scss */
+.genesis-nav-menu a:hover,
+.genesis-nav-menu .current-menu-item > a {
+  color: #ed702b;
+  text-decoration: none;
+}
+
+/* line 52, sass/_site-navigation.scss */
+.genesis-nav-menu > .menu-item > a {
+  text-transform: uppercase;
+}
+
+/* line 56, sass/_site-navigation.scss */
+.genesis-nav-menu .sub-menu {
+  left: -9999px;
+  opacity: 0;
+  position: absolute;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 190px;
+  z-index: 99;
+}
+
+/* line 69, sass/_site-navigation.scss */
+.genesis-nav-menu .sub-menu a {
+  background-color: #fff;
+  border: 1px solid #eeeeee;
+  border-top: none;
+  letter-spacing: 0;
+  padding: 16px 20px;
+  padding: 1.6rem 2rem;
+  position: relative;
+  width: 190px;
+}
+
+/* line 80, sass/_site-navigation.scss */
+.genesis-nav-menu .sub-menu .sub-menu {
+  margin: -54px 0 0 189px;
+}
+
+/* line 84, sass/_site-navigation.scss */
+.genesis-nav-menu .menu-item:hover {
+  position: static;
+}
+
+/* line 88, sass/_site-navigation.scss */
+.genesis-nav-menu .menu-item:hover > .sub-menu {
+  left: auto;
+  opacity: 1;
+}
+
+/* line 93, sass/_site-navigation.scss */
+.genesis-nav-menu > .first > a {
+  padding-left: 0;
+}
+
+/* line 97, sass/_site-navigation.scss */
+.genesis-nav-menu > .last > a {
+  padding-right: 0;
+}
+
+/* line 101, sass/_site-navigation.scss */
+.genesis-nav-menu > .right {
+  display: inline-block;
+  float: right;
+  list-style-type: none;
+  padding: 22px 18px;
+  padding: 2.2rem 1.8rem;
+  text-transform: uppercase;
+}
+
+/* line 110, sass/_site-navigation.scss */
+.genesis-nav-menu > .right > a {
+  display: inline;
+  padding: 0;
+}
+
+/* line 115, sass/_site-navigation.scss */
+.genesis-nav-menu > .rss > a {
+  margin-left: 48px;
+  margin-left: 4.8rem;
+}
+
+/* line 120, sass/_site-navigation.scss */
+.genesis-nav-menu > .search {
+  padding: 8px 12px 0 0;
+  padding: 0.8rem 1.2rem 0 0;
+}
+
+/* line 125, sass/_site-navigation.scss */
+.genesis-nav-menu .search-form {
+  width: 100%;
+}
+
+/* Site Header Navigation
+--------------------------------------------- */
+/* line 132, sass/_site-navigation.scss */
+.site-header .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 138, sass/_site-navigation.scss */
+.site-header .current-menu-item > a,
+.site-header .genesis-nav-menu a:hover,
+.site-header .sub-menu a:hover {
+  color: #ed702b;
+}
+
+/* Primary Navigation
+--------------------------------------------- */
+/* line 146, sass/_site-navigation.scss */
+.nav-primary,
+.nav-primary .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 150, sass/_site-navigation.scss */
+.nav-primary {
+  border-top: 1px solid white;
+}
+
+/* line 154, sass/_site-navigation.scss */
+.nav-primary .wrap {
+  border: none;
+}
+
+/* line 161, sass/_site-navigation.scss */
+.nav-primary a:hover,
+.nav-primary .current-menu-item > a,
+.nav-primary .sub-menu a:hover,
+.nav-primary .sub-menu .current-menu-item > a:hover {
+  color: #ed702b;
+}
+
+/* line 165, sass/_site-navigation.scss */
+.nav-primary .sub-menu .current-menu-item > a {
+  color: #fff;
+}
+
+/* Secondary Navigation
+--------------------------------------------- */
+/* line 173, sass/_site-navigation.scss */
+.nav-secondary,
+.nav-secondary .sub-menu a {
+  background: url(images/texture.png);
+}
+
+/* line 177, sass/_site-navigation.scss */
+.nav-secondary {
+  border-top: 1px solid white;
+}
+
+/* line 181, sass/_site-navigation.scss */
+.nav-secondary .wrap {
+  border: none;
+}
+
+/* line 188, sass/_site-navigation.scss */
+.nav-secondary a:hover,
+.nav-secondary .current-menu-item > a,
+.nav-secondary .sub-menu a:hover,
+.nav-secondary .sub-menu .current-menu-item > a:hover {
+  color: #ed702b;
+}
+
+/* line 192, sass/_site-navigation.scss */
+.nav-secondary .sub-menu .current-menu-item > a {
+  color: #fff;
+}
+
+/*
+Content Area
+---------------------------------------------------------------------------------------------------- */
+/* Entries
+--------------------------------------------- */
+/* line 8, sass/_content-area.scss */
+.entry {
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+/* line 14, sass/_content-area.scss */
+.single .entry {
+  margin-bottom: 16px;
+  margin-bottom: 1.6rem;
+}
+
+/* line 20, sass/_content-area.scss */
+.eleven40-landing .entry {
+  background-color: #fff;
+  padding: 40px 40px 16px;
+  padding: 4rem 4rem 1.6rem;
+}
+
+/* line 28, sass/_content-area.scss */
+.entry-content ol,
+.entry-content p,
+.entry-content ul {
+  margin-bottom: 26px;
+  margin-bottom: 2.6rem;
+}
+
+/* line 34, sass/_content-area.scss */
+.entry-content ol,
+.entry-content ul {
+  margin-left: 40px;
+  margin-left: 4rem;
+}
+
+/* line 39, sass/_content-area.scss */
+.entry-content ol li {
+  list-style-type: decimal;
+}
+
+/* line 43, sass/_content-area.scss */
+.entry-content ul li {
+  list-style-type: disc;
+}
+
+/* line 49, sass/_content-area.scss */
+.entry-content ol ol,
+.entry-content ul ul,
+.entry-content .wp-caption p {
+  margin-bottom: 0;
+}
+
+/* line 53, sass/_content-area.scss */
+.entry-meta {
+  clear: both;
+  color: #999;
+  font-size: 14px;
+  font-size: 1.4rem;
+}
+
+/* line 60, sass/_content-area.scss */
+.entry-header .entry-meta {
+  margin-bottom: 24px;
+  margin-bottom: 2.4rem;
+}
+
+/* line 65, sass/_content-area.scss */
+.entry-footer .entry-meta {
+  border-top: double #dddddd;
+  padding-top: 12px;
+  padding-top: 1.2rem;
+}
+
+/* line 71, sass/_content-area.scss */
+.entry-comments-link::before {
+  content: "\2014";
+  margin: 0 6px 0 2px;
+  margin: 0 0.6rem 0 0.2rem;
+}
+
+/* line 78, sass/_content-area.scss */
+.entry-categories,
+.entry-tags {
+  display: block;
+}
+
+/* Pagination
+--------------------------------------------- */
+/* line 86, sass/_content-area.scss */
+.archive-pagination,
+.entry-pagination {
+  clear: both;
+  font-family: "Oswald", sans-serif;
+  font-size: 14px;
+  font-size: 1.4rem;
+  margin: 40px 0;
+  margin: 4rem 0;
+}
+
+/* line 95, sass/_content-area.scss */
+.archive-pagination li {
+  display: inline;
+}
+
+/* line 99, sass/_content-area.scss */
+.archive-pagination a {
+  background-color: #222;
+  border-radius: 3px;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  padding: 8px 12px;
+  padding: 0.8rem 1.2rem;
+}
+
+/* line 110, sass/_content-area.scss */
+.archive-pagination a:hover,
+.archive-pagination li.active a {
+  background-color: #ed702b;
+  text-decoration: none;
+}
+
+/* Comments
+--------------------------------------------- */
+/* line 118, sass/_content-area.scss */
+.entry-comments,
+.ping-list {
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+/* line 123, sass/_content-area.scss */
+.entry-comments .comment-author {
+  margin-bottom: 0;
+}
+
+/* line 129, sass/_content-area.scss */
+.comment-respond input[type="email"],
+.comment-respond input[type="text"],
+.comment-respond input[type="url"] {
+  width: 50%;
+}
+
+/* line 133, sass/_content-area.scss */
+.comment-respond label {
+  display: block;
+  margin-right: 12px;
+  margin-right: 1.2rem;
+}
+
+/* line 140, sass/_content-area.scss */
+.comment-list li,
+.ping-list li {
+  list-style-type: none;
+  margin-top: 24px;
+  margin-top: 2.4rem;
+  padding: 32px;
+  padding: 3.2rem;
+}
+
+/* line 148, sass/_content-area.scss */
+.comment-list li li {
+  margin-right: -32px;
+  margin-right: -3.2rem;
+}
+
+/* line 153, sass/_content-area.scss */
+.comment {
+  background-color: #f5f5f5;
+  border: 2px solid white;
+  border-right: none;
+}
+
+/* line 159, sass/_content-area.scss */
+.comment .avatar {
+  margin: 0 16px 24px 0;
+  margin: 0 1.6rem 2.4rem 0;
+}
+
+/* line 167, sass/_content-area.scss */
+.form-allowed-tags {
+  background-color: #f5f5f5;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 24px;
+  padding: 2.4rem;
+}
+
+/* line 176, sass/_content-area.scss */
+.post-single-about.php {
+  background: url(http://gamma.dev/gamma_content/uploads/2013/08/IMAG1550-1024x768.jpg) no-repeat transparent;
+}
+
+/* Custom Post Types
+----------------------------------------------------------------- */
+/* CPT lists
+----------------------------------------------------------------- */
+/* line 7, sass/_custom-post-types.scss */
+.content-box-snow section ul {
+  list-style-type: none;
+  word-wrap: break-word;
+}
+
+/* line 16, sass/_custom-post-types.scss */
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section ul {
+  list-style-type: none;
+  word-wrap: break-word;
+}
+
+/* line 23, sass/_custom-post-types.scss */
+.cpt h3 {
+  padding-top: 10px;
+  margin-bottom: 5px;
+}
+
+/* line 27, sass/_custom-post-types.scss */
+.cpt ul {
+  border-bottom: 1px solid #dddddd;
+  padding-bottom: 10px;
+}
+
+/* line 31, sass/_custom-post-types.scss */
+.cpt li {
+  list-style-type: none;
+  word-wrap: break-word;
+}
+
+/* CPT Headers
+----------------------------------------------------------------- */
+/* line 43, sass/_custom-post-types.scss */
+.content-box-snow section h2 {
+  margin-bottom: 4px;
+  margin-bottom: 0.4rem;
+}
+
+/* line 52, sass/_custom-post-types.scss */
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section h2 {
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+}
+
+/* CPT Images
+----------------------------------------------------------------- */
+/* line 61, sass/_custom-post-types.scss */
+.content-box-snow section img {
+  float: left;
+  margin: 0 16px 0 0;
+  padding: 4px;
+  border: 1px;
+}
+
+/* line 72, sass/_custom-post-types.scss */
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section img {
+  float: left;
+  margin: 0 16px 0 0;
+  padding: 4px;
+  border: 1px;
+}
+
+/* About CPT
+----------------------------------------------- 
+.about {
+   
+   background: url(http://gamma.dev/gamma_content/uploads/2013/08/bill11.jpg) no-repeat top left fixed; 
+
+ }
+
+ */
+/*
+.about-box {
+    margin: 0;
+    position: relative;
+    //border: 5px solid white;
+    //box-shadow: 0 0 4px rgba(0,0,0,.3);
+    display: block;
+}
+
+.about-content {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 0px;
+    background: rgba(0,0,0,.1);
+    color: white;
+}
+
+figcaption h3,
+figcaption p {
+    padding: 10px 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+
+figcaption h3 {
+    background: black;
+    margin-top: 20px;
+}
+
+figcaption a {
+    color: white;
+}
+
+/*
+.about {
+background: url("http://gamma.dev/gamma_content/uploads/2013/08/bill-1024x670.jpg");
+background-repeat: no-repeat;
+
+}
+*/
+/* line 137, sass/_custom-post-types.scss */
+.about .about-content blockquote {
+  font-size: 32px;
+}
+
+/* Content Boxes
+------------------------------------------------------------ */
+/* line 10, sass/_content-boxes-buttons.scss */
+.content-box-blue,
+.content-box-gray,
+.content-box-snow,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+  margin: 0 0 15px;
+  overflow: hidden;
+  padding: 15px;
+}
+
+/* line 16, sass/_content-boxes-buttons.scss */
+.content-box-blue {
+  background-color: #d8ecf7;
+  border: 1px solid #afcde3;
+}
+
+/* line 23, sass/_content-boxes-buttons.scss */
+.content-box-gray {
+  background-color: #e2e2e2;
+  border: 1px solid #bdbdbd;
+}
+
+/* line 28, sass/_content-boxes-buttons.scss */
+.content-box-snow {
+  background-color: #F5F5F5;
+  border: 1px solid #e2e2e2;
+}
+
+/* line 33, sass/_content-boxes-buttons.scss */
+.content-box-green {
+  background-color: #d9edc2;
+  border: 1px solid #b2ce96;
+}
+
+/* line 38, sass/_content-boxes-buttons.scss */
+.content-box-purple {
+  background-color: #e2e2f9;
+  border: 1px solid #bebde9;
+}
+
+/* line 43, sass/_content-boxes-buttons.scss */
+.content-box-red {
+  background-color: #f9dbdb;
+  border: 1px solid #e9b3b3;
+}
+
+/* line 48, sass/_content-boxes-buttons.scss */
+.content-box-yellow {
+  background-color: #fef5c4;
+  border: 1px solid #fadf98;
+}
+
+/* Color Buttons
+------------------------------------------------------------ */
+/* line 63, sass/_content-boxes-buttons.scss */
+.button-blue,
+.button-gray,
+.button-green,
+.button-purple,
+.button-red,
+.button-yellow {
+  color: #fff;
+  padding: 5px 10px;
+}
+
+/* line 73, sass/_content-boxes-buttons.scss */
+.button-blue:hover,
+.button-gray:hover,
+.button-green:hover,
+.button-purple:hover,
+.button-red:hover,
+.button-yellow:hover {
+  text-decoration: none;
+}
+
+/* Read More Buttun */
+/* line 79, sass/_content-boxes-buttons.scss */
+.button-blue {
+  cursor: pointer;
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0 0 1.25em;
+  position: relative;
+  text-decoration: none;
+  text-align: center;
+  display: inline-block;
+  padding-top: 0.5625em;
+  padding-right: 1.125em;
+  padding-bottom: 0.625em;
+  padding-left: 1.125em;
+  font-size: 0.8125em;
+  background-color: #000;
+  border: 1px solid black;
+}
+
+/* line 99, sass/_content-boxes-buttons.scss */
+.button-blue:hover {
+  background-color: #2aa4cf;
+  border: 1px solid #2aa4cf;
+}
+
+/* line 104, sass/_content-boxes-buttons.scss */
+.eleven40-pro-blue .entry-content .more-link {
+  color: #fff;
+}
+
+/* line 108, sass/_content-boxes-buttons.scss */
+.eleven40-pro-blue .entry-content .more-link:hover {
+  color: #fff;
+}
+
+/* line 113, sass/_content-boxes-buttons.scss */
+.button-gray {
+  background-color: #bdbdbd;
+  border: 1px solid #bdbdbd;
+}
+
+/* line 118, sass/_content-boxes-buttons.scss */
+.button-gray:hover {
+  background-color: #919191;
+  border: 1px solid #919191;
+}
+
+/* line 123, sass/_content-boxes-buttons.scss */
+.button-green {
+  background-color: #b2ce96;
+  border: 1px solid #b2ce96;
+}
+
+/* line 128, sass/_content-boxes-buttons.scss */
+.button-green:hover {
+  background-color: #86a36e;
+  border: 1px solid #86a36e;
+}
+
+/* line 133, sass/_content-boxes-buttons.scss */
+.button-purple {
+  background-color: #bebde9;
+  border: 1px solid #bebde9;
+}
+
+/* line 138, sass/_content-boxes-buttons.scss */
+.button-purple:hover {
+  background-color: #9291c7;
+  border: 1px solid #9291c7;
+}
+
+/* line 143, sass/_content-boxes-buttons.scss */
+.button-red {
+  background-color: #e9b3b3;
+  border: 1px solid #e9b3b3;
+}
+
+/* line 148, sass/_content-boxes-buttons.scss */
+.button-red:hover {
+  background-color: #c78787;
+  border: 1px solid #c78787;
+}
+
+/* line 153, sass/_content-boxes-buttons.scss */
+.button-yellow {
+  background-color: #fadf98;
+  border: 1px solid #fadf98;
+}
+
+/* line 158, sass/_content-boxes-buttons.scss */
+.button-yellow:hover {
+  background-color: #ecb870;
+  border: 1px solid #ecb870;
+}
+
+/*
+Sidebars
+---------------------------------------------------------------------------------------------------- */
+/* line 5, sass/_sidebars.scss */
+.sidebar {
+  display: inline;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding-top: 32px;
+  padding-top: 3.2rem;
+}
+
+/* line 14, sass/_sidebars.scss */
+.sidebar p:last-child,
+.sidebar ul {
+  margin-bottom: 0;
+}
+
+/* line 18, sass/_sidebars.scss */
+.sidebar li {
+  border-bottom: 1px solid #dddddd;
+  list-style-type: none;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  word-wrap: break-word;
+}
+
+/* line 28, sass/_sidebars.scss */
+.widget ul > li:last-child {
+  border-width: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/* line 34, sass/_sidebars.scss */
+.sidebar .widget {
+  margin-bottom: 40px;
+  margin-bottom: 4rem;
+}
+
+/* line 39, sass/_sidebars.scss */
+.sidebar .search-form {
+  width: 100%;
+}
+
+/* Avatar
+------------------------------ */
+/* line 46, sass/_sidebars.scss */
+.avatar img {
+  background-color: #F5F5F5;
+  border: 1px solid #dddddd;
+  padding: 3px;
+}
+
+/*
+F
+---------------------------------------------------------------------------------------------------- */
+/* line 5, sass/_footer-widgets.scss */
+.footer-widgets {
+  background: url(images/texture.png);
+  color: #999;
+  clear: both;
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 40px 0 8px;
+  padding: 4rem 0 0.8rem;
+}
+
+/* line 16, sass/_footer-widgets.scss */
+.footer-widgets-1,
+.footer-widgets-3 {
+  width: 350px;
+}
+
+/* line 20, sass/_footer-widgets.scss */
+.footer-widgets-2 {
+  width: 360px;
+}
+
+/* line 24, sass/_footer-widgets.scss */
+.footer-widgets-1 {
+  margin-right: 40px;
+  margin-right: 4rem;
+}
+
+/* line 30, sass/_footer-widgets.scss */
+.footer-widgets-1,
+.footer-widgets-2 {
+  float: left;
+}
+
+/* line 34, sass/_footer-widgets.scss */
+.footer-widgets-3 {
+  float: right;
+}
+
+/* line 38, sass/_footer-widgets.scss */
+.footer-widgets .widget {
+  margin-bottom: 32px;
+  margin-bottom: 3.2rem;
+}
+
+/* line 44, sass/_footer-widgets.scss */
+.footer-widgets .entry-title a,
+.footer-widgets .widgettitle {
+  color: #fff;
+}
+
+/* line 48, sass/_footer-widgets.scss */
+.footer-widgets li {
+  border-bottom: 1px solid #333333;
+  list-style-type: none;
+  margin-bottom: 8px;
+  margin-bottom: 0.8rem;
+  padding-bottom: 8px;
+  padding-bottom: 0.8rem;
+  word-wrap: break-word;
+}
+
+/* line 58, sass/_footer-widgets.scss */
+.footer-widgets .search-form {
+  width: 100%;
+}
+
+/* line 62, sass/_footer-widgets.scss */
+.footer-widgets .latest-tweets li span a {
+  color: #ccc;
+}
+
+/*
+Site Footer
+---------------------------------------------------------------------------------------------------- */
+/* line 5, sass/_site-footer.scss */
+.site-footer {
+  font-size: 14px;
+  font-size: 1.4rem;
+  padding: 24px 0;
+  padding: 2.4rem 0;
+  text-align: center;
+}
+
+/* line 14, sass/_site-footer.scss */
+.site-footer,
+.site-footer a {
+  color: #333;
+}
+
+/* line 18, sass/_site-footer.scss */
+.site-footer a:hover {
+  color: #ed702b;
+}
+
+/* line 22, sass/_site-footer.scss */
+.site-footer p {
+  margin-bottom: 0;
+}
+
+/*
+Color Styles
+---------------------------------------------------------------------------------------------------- */
+/* line 19, sass/_color-styles.scss */
+.eleven40-pro-blue .archive-pagination a,
+.eleven40-pro-blue .footer-widgets .entry-title a,
+.eleven40-pro-blue .genesis-nav-menu a,
+.eleven40-pro-blue .site-title a,
+.eleven40-pro-blue .site-title a:hover,
+.eleven40-pro-green .archive-pagination a,
+.eleven40-pro-green .footer-widgets .entry-title a,
+.eleven40-pro-green .genesis-nav-menu a,
+.eleven40-pro-green .site-title a,
+.eleven40-pro-green .site-title a:hover,
+.eleven40-pro-red .archive-pagination a,
+.eleven40-pro-red .footer-widgets .entry-title a,
+.eleven40-pro-red .genesis-nav-menu a,
+.eleven40-pro-red .site-title a,
+.eleven40-pro-red .site-title a:hover {
+  color: #fff;
+}
+
+/* line 25, sass/_color-styles.scss */
+.eleven40-pro-blue .entry-title a,
+.eleven40-pro-green .entry-title a,
+.eleven40-pro-red .entry-title a {
+  color: #333;
+}
+
+/* eleven40 Pro Blue
+--------------------------------------------- */
+/* line 39, sass/_color-styles.scss */
+.eleven40-pro-blue a,
+.eleven40-pro-blue .entry-title a:hover,
+.eleven40-pro-blue .genesis-nav-menu a:hover,
+.eleven40-pro-blue .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-blue .nav-primary .sub-menu a:hover,
+.eleven40-pro-blue .nav-secondary .sub-menu a:hover,
+.eleven40-pro-blue .site-footer a:hover,
+.eleven40-pro-blue .site-header .sub-menu a:hover {
+  color: #2aa4cf;
+}
+
+/* line 48, sass/_color-styles.scss */
+.eleven40-pro-blue button:hover,
+.eleven40-pro-blue input:hover[type="button"],
+.eleven40-pro-blue input:hover[type="reset"],
+.eleven40-pro-blue input:hover[type="submit"],
+.eleven40-pro-blue .archive-pagination a:hover,
+.eleven40-pro-blue .archive-pagination li.active a {
+  background-color: #2aa4cf;
+}
+
+/* eleven40 Pro Green
+--------------------------------------------- */
+/* line 62, sass/_color-styles.scss */
+.eleven40-pro-green a,
+.eleven40-pro-green .entry-title a:hover,
+.eleven40-pro-green .genesis-nav-menu a:hover,
+.eleven40-pro-green .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-green .nav-primary .sub-menu a:hover,
+.eleven40-pro-green .nav-secondary .sub-menu a:hover,
+.eleven40-pro-green .site-footer a:hover,
+.eleven40-pro-green .site-header .sub-menu a:hover {
+  color: #6ca741;
+}
+
+/* line 71, sass/_color-styles.scss */
+.eleven40-pro-green button:hover,
+.eleven40-pro-green input:hover[type="button"],
+.eleven40-pro-green input:hover[type="reset"],
+.eleven40-pro-green input:hover[type="submit"],
+.eleven40-pro-green .archive-pagination a:hover,
+.eleven40-pro-green .archive-pagination li.active a {
+  background-color: #6ca741;
+}
+
+/* eleven40 Pro Red
+--------------------------------------------- */
+/* line 85, sass/_color-styles.scss */
+.eleven40-pro-red a,
+.eleven40-pro-red .entry-title a:hover,
+.eleven40-pro-red .genesis-nav-menu a:hover,
+.eleven40-pro-red .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-red .nav-primary .sub-menu a:hover,
+.eleven40-pro-red .nav-secondary .sub-menu a:hover,
+.eleven40-pro-red .site-footer a:hover,
+.eleven40-pro-red .site-header .sub-menu a:hover {
+  color: #cf4344;
+}
+
+/* line 94, sass/_color-styles.scss */
+.eleven40-pro-red button:hover,
+.eleven40-pro-red input:hover[type="button"],
+.eleven40-pro-red input:hover[type="reset"],
+.eleven40-pro-red input:hover[type="submit"],
+.eleven40-pro-red .archive-pagination a:hover,
+.eleven40-pro-red .archive-pagination li.active a {
+  background-color: #cf4344;
+}
+
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+/* Desktops, laptops and iPads (landscape)
+--------------------------------------------- */
+@media only screen and (max-width: 1139px) {
+  /* line 10, sass/_media-queries.scss */
+  .wrap {
+    max-width: 960px;
+  }
+
+  /* line 18, sass/_media-queries.scss */
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-sidebar-content .content-sidebar-wrap {
+    width: 740px;
+  }
+
+  /* line 23, sass/_media-queries.scss */
+  .content,
+  .site-header .widget-area {
+    width: 620px;
+  }
+
+  /* line 29, sass/_media-queries.scss */
+  .sidebar-content-sidebar .content,
+  .sidebar-sidebar-content .content,
+  .content-sidebar-sidebar .content {
+    width: 400px;
+  }
+
+  /* line 37, sass/_media-queries.scss */
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3,
+  .sidebar-primary,
+  .title-area {
+    width: 300px;
+  }
+}
+/* iPads (portrait)
+--------------------------------------------- */
+@media only screen and (max-width: 1023px) {
+  /* line 50, sass/_media-queries.scss */
+  .header-image .site-header .title-area {
+    background-position: center center !important;
+  }
+
+  /* line 68, sass/_media-queries.scss */
+  .content,
+  .content-sidebar-sidebar .content,
+  .content-sidebar-sidebar .content-sidebar-wrap,
+  .footer-widgets-1,
+  .footer-widgets-2,
+  .footer-widgets-3,
+  .sidebar-content-sidebar .content,
+  .sidebar-content-sidebar .content-sidebar-wrap,
+  .sidebar-primary,
+  .sidebar-secondary,
+  .sidebar-sidebar-content .content,
+  .sidebar-sidebar-content .content-sidebar-wrap,
+  .site-header .widget-area,
+  .title-area,
+  .wrap {
+    width: 100%;
+  }
+
+  /* line 73, sass/_media-queries.scss */
+  .site-header {
+    position: relative;
+  }
+
+  /* line 77, sass/_media-queries.scss */
+  .site-inner {
+    margin-top: 0;
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  /* line 88, sass/_media-queries.scss */
+  .comment-respond,
+  .entry,
+  .entry-comments,
+  .entry-footer .entry-meta,
+  .sidebar .widget,
+  .site-header {
+    padding: 0;
+  }
+
+  /* line 94, sass/_media-queries.scss */
+  .genesis-nav-menu li,
+  .site-header ul.genesis-nav-menu,
+  .site-header .search-form {
+    float: none;
+  }
+
+  /* line 102, sass/_media-queries.scss */
+  .genesis-nav-menu,
+  .site-header .title-area,
+  .site-header .search-form,
+  .site-header .widget-area,
+  .site-title {
+    text-align: center;
+  }
+
+  /* line 109, sass/_media-queries.scss */
+  .genesis-nav-menu a,
+  .genesis-nav-menu > .first > a,
+  .genesis-nav-menu > .last > a {
+    padding: 20px 16px;
+    padding: 2rem 1.6rem;
+  }
+
+  /* line 114, sass/_media-queries.scss */
+  .site-header .search-form {
+    margin: 16px auto;
+    margin: 1.6rem auto;
+  }
+
+  /* line 119, sass/_media-queries.scss */
+  .genesis-nav-menu li.right {
+    display: none;
+  }
+
+  /* line 123, sass/_media-queries.scss */
+  .content {
+    border: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
+
+  /* line 130, sass/_media-queries.scss */
+  .entry-footer .entry-meta {
+    margin: 0;
+    padding-top: 12px;
+    padding-top: 1.2rem;
+  }
+
+  /* line 136, sass/_media-queries.scss */
+  .author-box {
+    padding: 20px;
+    padding: 2rem;
+  }
+
+  /* line 141, sass/_media-queries.scss */
+  .sidebar-content-sidebar .author-box {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  /* line 146, sass/_media-queries.scss */
+  .footer-widgets {
+    padding: 40px 5% 16px;
+  }
+
+  /* line 150, sass/_media-queries.scss */
+  .footer-widgets-1 {
+    margin: 0;
+  }
+
+  /* line 154, sass/_media-queries.scss */
+  .about .one-fourth .about-img img {
+    display: none;
+  }
+}
+/* iPhones (portrait and landscape)
+--------------------------------------------- */
+@media only screen and (max-width: 767px) {
+  /* line 175, sass/_media-queries.scss */
+  .five-sixths,
+  .four-sixths,
+  .one-fourth,
+  .one-half,
+  .one-sixth,
+  .one-third,
+  .three-fourths,
+  .three-sixths,
+  .two-fourths,
+  .two-sixths,
+  .two-thirds {
+    margin: 0;
+    width: 100%;
+  }
+
+  /* line 181, sass/_media-queries.scss */
+  .genesis-grid-even,
+  .genesis-grid-odd {
+    width: 100%;
+  }
+}
+@media only screen and (max-width: 320px) {
+  /* line 189, sass/_media-queries.scss */
+  .header-image .site-header .title-area {
+    background-size: contain !important;
+  }
+}

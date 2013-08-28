@@ -1,0 +1,161 @@
+/* Content Boxes
+------------------------------------------------------------ */
+ 
+.content-box-blue,
+.content-box-gray,
+.content-box-snow,
+.content-box-green,
+.content-box-purple,
+.content-box-red,
+.content-box-yellow {
+    margin: 0 0 15px;
+    overflow: hidden;
+    padding: 15px;
+}
+ 
+.content-box-blue {
+
+
+    background-color: #d8ecf7;
+    border: 1px solid #afcde3;
+}
+ 
+.content-box-gray {
+    background-color: #e2e2e2;
+    border: 1px solid #bdbdbd;
+}
+
+.content-box-snow {
+    background-color: #F5F5F5;
+    border: 1px solid #e2e2e2;
+}
+ 
+.content-box-green {
+    background-color: #d9edc2;
+    border: 1px solid #b2ce96;
+}
+ 
+.content-box-purple {
+    background-color: #e2e2f9;
+    border: 1px solid #bebde9;
+}
+ 
+.content-box-red {
+    background-color: #f9dbdb;
+    border: 1px solid #e9b3b3;
+}
+ 
+.content-box-yellow {
+    background-color: #fef5c4;
+    border: 1px solid #fadf98;
+}
+
+
+
+/* Color Buttons
+------------------------------------------------------------ */
+ 
+.button-blue,
+.button-gray,
+.button-green,
+.button-purple,
+.button-red,
+.button-yellow {
+    color: #fff;
+    padding: 5px 10px;
+}
+ 
+.button-blue:hover,
+.button-gray:hover,
+.button-green:hover,
+.button-purple:hover,
+.button-red:hover,
+.button-yellow:hover {
+    text-decoration: none;
+}
+ 
+/* Read More Buttun */
+ 
+.button-blue {
+    cursor: pointer;
+      font-family: 'Oswald', sans-serif;
+      font-weight: 400;
+      line-height: 1;
+      margin: 0 0 1.25em;
+      position: relative;
+      text-decoration: none;
+      text-align: center;
+      display: inline-block;
+      padding-top: 0.5625em;
+      padding-right: 1.125em;
+      padding-bottom: 0.625em;
+      padding-left: 1.125em;
+      font-size: 0.8125em;
+      background-color: #000;
+      border: 1px solid #000;
+}
+
+
+.button-blue:hover {
+    background-color: #2aa4cf;
+    border: 1px solid #2aa4cf;
+}
+ 
+.eleven40-pro-blue .entry-content .more-link {
+    color: #fff;
+}
+
+.eleven40-pro-blue .entry-content .more-link:hover  {
+    color: #fff;
+}
+
+ 
+.button-gray {
+    background-color: #bdbdbd;
+    border: 1px solid #bdbdbd;
+}
+ 
+.button-gray:hover {
+    background-color: #919191;
+    border: 1px solid #919191;
+}
+ 
+.button-green {
+    background-color: #b2ce96;
+    border: 1px solid #b2ce96;
+}
+ 
+.button-green:hover {
+    background-color: #86a36e;
+    border: 1px solid #86a36e;
+}
+ 
+.button-purple {
+    background-color: #bebde9;
+    border: 1px solid #bebde9;
+}
+ 
+.button-purple:hover {
+    background-color: #9291c7;
+    border: 1px solid #9291c7;
+}
+ 
+.button-red {
+    background-color: #e9b3b3;
+    border: 1px solid #e9b3b3;
+}
+ 
+.button-red:hover {
+    background-color: #c78787;
+    border: 1px solid #c78787;
+}
+ 
+.button-yellow {
+    background-color: #fadf98;
+    border: 1px solid #fadf98;
+}
+ 
+.button-yellow:hover {
+    background-color: #ecb870;
+    border: 1px solid #ecb870;
+}

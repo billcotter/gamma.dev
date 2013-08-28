@@ -1,0 +1,96 @@
+/*
+Color Styles
+---------------------------------------------------------------------------------------------------- */
+
+.eleven40-pro-blue .archive-pagination a,
+.eleven40-pro-blue .footer-widgets .entry-title a, 
+.eleven40-pro-blue .genesis-nav-menu a,
+.eleven40-pro-blue .site-title a,
+.eleven40-pro-blue .site-title a:hover,
+.eleven40-pro-green .archive-pagination a,
+.eleven40-pro-green .footer-widgets .entry-title a, 
+.eleven40-pro-green .genesis-nav-menu a,
+.eleven40-pro-green .site-title a,
+.eleven40-pro-green .site-title a:hover,
+.eleven40-pro-red .archive-pagination a,
+.eleven40-pro-red .footer-widgets .entry-title a, 
+.eleven40-pro-red .genesis-nav-menu a,
+.eleven40-pro-red .site-title a,
+.eleven40-pro-red .site-title a:hover {
+	color: #fff;
+}
+
+.eleven40-pro-blue .entry-title a,
+.eleven40-pro-green .entry-title a,
+.eleven40-pro-red .entry-title a {
+	color: #333;
+}
+
+/* eleven40 Pro Blue
+--------------------------------------------- */
+
+.eleven40-pro-blue a,
+.eleven40-pro-blue .entry-title a:hover,
+.eleven40-pro-blue .genesis-nav-menu a:hover,
+.eleven40-pro-blue .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-blue .nav-primary .sub-menu a:hover,
+.eleven40-pro-blue .nav-secondary .sub-menu a:hover,
+.eleven40-pro-blue .site-footer a:hover,
+.eleven40-pro-blue .site-header .sub-menu a:hover {
+	color: #2aa4cf;
+}
+
+.eleven40-pro-blue button:hover,
+.eleven40-pro-blue input:hover[type="button"],
+.eleven40-pro-blue input:hover[type="reset"],
+.eleven40-pro-blue input:hover[type="submit"],
+.eleven40-pro-blue .archive-pagination a:hover,
+.eleven40-pro-blue .archive-pagination li.active a {
+	background-color: #2aa4cf;
+}
+
+/* eleven40 Pro Green
+--------------------------------------------- */
+
+.eleven40-pro-green a,
+.eleven40-pro-green .entry-title a:hover,
+.eleven40-pro-green .genesis-nav-menu a:hover,
+.eleven40-pro-green .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-green .nav-primary .sub-menu a:hover,
+.eleven40-pro-green .nav-secondary .sub-menu a:hover,
+.eleven40-pro-green .site-footer a:hover,
+.eleven40-pro-green .site-header .sub-menu a:hover {
+	color: #6ca741;
+}
+
+.eleven40-pro-green button:hover,
+.eleven40-pro-green input:hover[type="button"],
+.eleven40-pro-green input:hover[type="reset"],
+.eleven40-pro-green input:hover[type="submit"],
+.eleven40-pro-green .archive-pagination a:hover,
+.eleven40-pro-green .archive-pagination li.active a {
+	background-color: #6ca741;
+}
+
+/* eleven40 Pro Red
+--------------------------------------------- */
+
+.eleven40-pro-red a,
+.eleven40-pro-red .entry-title a:hover,
+.eleven40-pro-red .genesis-nav-menu a:hover,
+.eleven40-pro-red .genesis-nav-menu .current-menu-item > a,
+.eleven40-pro-red .nav-primary .sub-menu a:hover,
+.eleven40-pro-red .nav-secondary .sub-menu a:hover,
+.eleven40-pro-red .site-footer a:hover,
+.eleven40-pro-red .site-header .sub-menu a:hover {
+	color: #cf4344;
+}
+
+.eleven40-pro-red button:hover,
+.eleven40-pro-red input:hover[type="button"],
+.eleven40-pro-red input:hover[type="reset"],
+.eleven40-pro-red input:hover[type="submit"],
+.eleven40-pro-red .archive-pagination a:hover,
+.eleven40-pro-red .archive-pagination li.active a {
+	background-color: #cf4344;
+}

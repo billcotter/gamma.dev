@@ -1,0 +1,196 @@
+/*
+Media Queries
+---------------------------------------------------------------------------------------------------- */
+
+/* Desktops, laptops and iPads (landscape)
+--------------------------------------------- */
+
+@media only screen and (max-width: 1139px) {
+
+	.wrap {
+		max-width: 960px;
+		
+
+	}
+
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-sidebar-content .content-sidebar-wrap {
+		width: 740px;
+	}
+
+	.content,
+	.site-header .widget-area {
+		width: 620px;
+	}
+
+	.sidebar-content-sidebar .content,
+	.sidebar-sidebar-content .content,
+	.content-sidebar-sidebar .content {
+		width: 400px;
+	}
+
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3,
+	.sidebar-primary,
+	.title-area {
+		width: 300px;
+	}
+
+
+
+}
+
+/* iPads (portrait)
+--------------------------------------------- */
+
+@media only screen and (max-width: 1023px) {
+
+	.header-image .site-header .title-area {
+		background-position: center center !important;
+	}
+
+	.content,
+	.content-sidebar-sidebar .content,
+	.content-sidebar-sidebar .content-sidebar-wrap,
+	.footer-widgets-1,
+	.footer-widgets-2,
+	.footer-widgets-3,
+	.sidebar-content-sidebar .content,
+	.sidebar-content-sidebar .content-sidebar-wrap,
+	.sidebar-primary,
+	.sidebar-secondary,
+	.sidebar-sidebar-content .content,
+	.sidebar-sidebar-content .content-sidebar-wrap,
+	.site-header .widget-area,
+	.title-area,
+	.wrap {
+		width: 100%;
+
+	}
+
+	.site-header {
+		position: relative;
+	}
+
+	.site-inner {
+		margin-top: 0;
+		padding-left: 5%;
+		padding-right: 5%;
+	}
+
+	.comment-respond,
+	.entry,
+	.entry-comments,
+	.entry-footer .entry-meta,
+	.sidebar .widget,
+	.site-header {
+		padding: 0;
+	}
+
+	.genesis-nav-menu li,
+	.site-header ul.genesis-nav-menu,
+	.site-header .search-form {
+		float: none;
+	}
+
+	.genesis-nav-menu,
+	.site-header .title-area,
+	.site-header .search-form,
+	.site-header .widget-area,
+	.site-title {
+		text-align: center;
+
+}
+
+	.genesis-nav-menu a,
+	.genesis-nav-menu > .first > a,
+	.genesis-nav-menu > .last > a {
+		padding: 20px 16px;
+		padding: 2rem 1.6rem;
+	}
+
+	.site-header .search-form {
+		margin: 16px auto ;
+		margin: 1.6rem auto;
+	}
+
+	.genesis-nav-menu li.right {
+		display: none;
+	}
+
+	.content {
+		border: none;
+		padding-left: 0;
+		padding-right: 0;
+
+	}
+
+	.entry-footer .entry-meta {
+		margin: 0;
+		padding-top: 12px;
+		padding-top: 1.2rem;
+	}
+
+	.author-box {
+		padding: 20px;
+		padding: 2rem;
+	}
+
+	.sidebar-content-sidebar .author-box {
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.footer-widgets {
+		padding: 40px 5% 16px;
+	}
+
+	.footer-widgets-1 {
+		margin: 0;
+	}
+
+	.about .one-fourth .about-img img {
+    display: none;
+}
+
+}
+
+/* iPhones (portrait and landscape)
+--------------------------------------------- */
+
+@media only screen and (max-width: 767px) {
+
+	.five-sixths,
+	.four-sixths,
+	.one-fourth,
+	.one-half,
+	.one-sixth,
+	.one-third,
+	.three-fourths,
+	.three-sixths,
+	.two-fourths,
+	.two-sixths,
+	.two-thirds {
+		margin: 0;
+		width: 100%;
+	}
+
+	.genesis-grid-even,
+	.genesis-grid-odd {
+		width: 100%;
+	}
+
+}
+
+@media only screen and (max-width: 320px) {
+
+	.header-image .site-header .title-area {
+		background-size: contain !important;
+
+	}
+
+
+
+}

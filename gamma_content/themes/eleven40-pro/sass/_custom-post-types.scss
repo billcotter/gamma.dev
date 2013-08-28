@@ -1,0 +1,143 @@
+/* Custom Post Types
+----------------------------------------------------------------- */
+
+/* CPT lists
+----------------------------------------------------------------- */
+
+.content-box-snow section ul {
+    
+    list-style-type: none;
+    word-wrap: break-word;
+        
+}
+
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section ul {
+
+    list-style-type: none;
+    word-wrap: break-word;
+
+}
+
+.cpt h3 {
+    padding-top: 10px;
+    margin-bottom: 5px;
+}
+.cpt ul {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+.cpt li {
+  
+  list-style-type: none;
+  word-wrap: break-word;
+}
+
+
+
+
+
+/* CPT Headers
+----------------------------------------------------------------- */
+.content-box-snow section h2 {
+
+    margin-bottom: 4px;
+    margin-bottom: 0.4rem;
+
+}
+
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section h2 {
+
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+
+}
+
+/* CPT Images
+----------------------------------------------------------------- */
+.content-box-snow section img {
+    
+    float: left;
+    margin: 0 16px 0 0;
+    padding: 4px;
+    border: 1px;
+        
+}
+
+.eleven40-pro-red
+.eleven40-pro-blue
+.eleven40-pro-green section img {
+    
+    float: left;
+    margin: 0 16px 0 0;
+    padding: 4px;
+    border: 1px;
+        
+}
+
+
+/* About CPT
+----------------------------------------------- 
+.about {
+   
+   background: url(http://gamma.dev/gamma_content/uploads/2013/08/bill11.jpg) no-repeat top left fixed; 
+
+ }
+
+ */
+
+
+/*
+.about-box {
+    margin: 0;
+    position: relative;
+    //border: 5px solid white;
+    //box-shadow: 0 0 4px rgba(0,0,0,.3);
+    display: block;
+}
+
+.about-content {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    top: 0px;
+    background: rgba(0,0,0,.1);
+    color: white;
+}
+
+figcaption h3,
+figcaption p {
+    padding: 10px 20px;
+    margin-bottom: 0;
+    margin-top: 0;
+
+}
+
+figcaption h3 {
+    background: black;
+    margin-top: 20px;
+}
+
+figcaption a {
+    color: white;
+}
+
+/*
+.about {
+background: url("http://gamma.dev/gamma_content/uploads/2013/08/bill-1024x670.jpg");
+background-repeat: no-repeat;
+
+}
+*/
+
+
+.about .about-content blockquote {
+    font-size: 32px;
+
+}
+
+
+

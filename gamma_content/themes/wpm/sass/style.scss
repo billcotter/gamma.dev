@@ -1,0 +1,23 @@
+/*!
+Theme Name: wpm
+Theme URI: http://underscores.me/
+Author: Underscores.me
+Author URI: http://underscores.me/
+Description: Description
+Version: 1.0
+License: GNU General Public License
+License URI: license.txt
+Tags:
+*/
+ 
+@import "reset";
+@import "global";
+@import "structure";
+@import "menu";
+@import "content";
+@import "asides";
+@import "media";
+@import 'navigation';
+@import 'comments';
+@import 'widgets';
+@import 'scroll';

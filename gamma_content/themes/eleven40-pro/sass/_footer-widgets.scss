@@ -1,0 +1,64 @@
+/*
+F
+---------------------------------------------------------------------------------------------------- */
+
+.footer-widgets {
+	background: url(images/texture.png);
+	color: #999;
+	clear: both;
+	font-size: 14px;
+	font-size: 1.4rem;
+	padding: 40px 0 8px;
+	padding: 4rem 0 0.8rem;
+}
+
+.footer-widgets-1,
+.footer-widgets-3 {
+	width: 350px;
+}
+
+.footer-widgets-2 {
+	width: 360px;
+}
+
+.footer-widgets-1 {
+	margin-right: 40px;
+	margin-right: 4rem;
+}
+
+.footer-widgets-1,
+.footer-widgets-2 {
+	float: left;
+}
+
+.footer-widgets-3 {
+	float: right;
+}
+
+.footer-widgets .widget {
+	margin-bottom: 32px;
+	margin-bottom: 3.2rem;
+}
+
+.footer-widgets .entry-title a,
+.footer-widgets .widgettitle {
+	color: #fff;
+}
+
+.footer-widgets li {
+	border-bottom: 1px solid #333;
+	list-style-type: none;
+	margin-bottom: 8px;
+	margin-bottom: 0.8rem;
+	padding-bottom: 8px;
+	padding-bottom: 0.8rem;
+	word-wrap: break-word;
+}
+
+.footer-widgets .search-form {
+	width: 100%;
+}
+
+.footer-widgets .latest-tweets li span a {
+	color: #ccc;
+}
