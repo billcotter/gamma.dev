@@ -42,8 +42,9 @@ lknalknlkanlsknl klsanlcknlaskcns;lan klasnclknaslkn skan;lsan lknalknlkanlsknl 
 			
 	<div class="one-fourth first">
 	
-	<figure class="about-img"><img src="http://gamma.dev/gamma_content/uploads/2013/08/bill13.jpg" />
+	<figure class="about-img"><img src="http://gamma.wiredpm.com/gamma_content/uploads/2013/08/bill13.jpg" />
 	</figure>
+	
 	</div>
 	
 	
