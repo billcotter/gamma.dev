@@ -4,7 +4,7 @@ remove_action( 'genesis_site_description', 'genesis_seo_site_description' );
 add_action( 'genesis_before_content_sidebar_wrap', 'genesis_seo_site_description' );
 
 /** Remove the post meta function */
-remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
+//remove_action( 'genesis_entry_footer', 'genesis_post_meta' );
 
 
 remove_action( 'genesis_loop', 'genesis_do_loop' );

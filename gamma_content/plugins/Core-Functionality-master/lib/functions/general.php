@@ -232,7 +232,7 @@ function custom_field_entry_content() {
 if(is_singular( $post_type = 'book-review')  ) {
 
 
-echo '<div class="content-box-snow">';
+echo '<div class="content-box-blue">';
 
 
 echo '<section>';
@@ -366,7 +366,7 @@ add_action( 'genesis_entry_footer', 'wjc_custom_field_entry_footer' );
 function wjc_custom_field_entry_footer() {
 if(is_singular( $post_type = 'design-resource' )) {
 
-echo '<div class="content-box-snow">';
+echo '<div class="content-box-blue">';
 
 
 echo '<section>';

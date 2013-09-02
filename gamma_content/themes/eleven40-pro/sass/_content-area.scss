@@ -177,3 +177,25 @@ Content Area
 
 	background: url(http://gamma.dev/gamma_content/uploads/2013/08/IMAG1550-1024x768.jpg) no-repeat transparent;
 }
+
+
+/* Session Post 
+----------------------------------------- */
+.entry-content .session-post {
+background-color: #e9f6f5;
+border-color: #a9cac6;
+}
+
+.entry-content .session-post {
+padding: 3px 10px;
+color: #3e3e3e;
+border: 1px solid #eee;
+background: #f5f5f5;
+overflow: hidden;
+margin: 15px 0;
+font-size: 12px;
+}
+
+.entry-content .right {
+float: right;
+}
