@@ -100,6 +100,8 @@ blockquote::before {
 	max-width: 800px;
 }
 
+
+
 cite {
 	font-style: normal;
 }
@@ -172,6 +174,11 @@ img {
 .featured-content img,
 .gallery img {
 	width: auto; /* IE8 */
+}
+
+.entry-content img {
+	border: 1px solid #ddd;;
+	padding: 10px;
 }
 
 /* Forms

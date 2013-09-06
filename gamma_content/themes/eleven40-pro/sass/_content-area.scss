@@ -186,16 +186,34 @@ background-color: #e9f6f5;
 border-color: #a9cac6;
 }
 
-.entry-content .session-post {
-padding: 3px 10px;
+.entry-content .seriesmeta {
+padding: 20px;
 color: #3e3e3e;
 border: 1px solid #eee;
 background: #f5f5f5;
 overflow: hidden;
 margin: 15px 0;
-font-size: 12px;
+font-size: 16px;
 }
 
+
+.entry-content fieldset {
+padding: 20px;
+color: #3e3e3e;
+border: 1px solid #eee;
+background: #f5f5f5;
+overflow: hidden;
+margin: 15px 0;
+font-size: 16px;
+}
+
+/* 
+.entry-content .fieldset {
+  border: 1px solid silver;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+*/
 .entry-content .right {
 float: right;
 }
